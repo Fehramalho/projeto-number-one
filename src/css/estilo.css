@@ -1,0 +1,192 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    /* add: imagens */
+    background-image: url(../imagens/fundo-1.jpeg);
+    /* pedido para nao repetir imagem novamente */
+    background-repeat: no-repeat;
+    /* pedido para a imagem cobrir todo espaço do visor */
+    background-size: cover;
+    /* "vh" unidade de medida */
+    min-height: 100vh;
+
+}
+
+/* obecevaçao: seletor de class .cabecalho */
+.cabecalho {
+    /* alinha texto */
+    text-align: center;
+    padding: 60px 0;
+
+}
+
+.cabecalho h1 {
+    color: #48cf13;
+    /* tamalho da fonte  */
+    font-size: 45px;
+    /* espaçamento entre letras */
+    letter-spacing: 10px;
+    /* colocar todas letras maiuscula */
+    text-transform: uppercase;
+
+}
+
+.personagens-slider {
+    /* propriedade do display "flex" = em linha */
+    display: flex;
+    /* alinha imagens ao centro horizontal */
+    justify-content: center;
+    /* alinhar itens no centro */
+    align-items: center;
+    /* afastamento entre itens */
+    gap: 80px;
+
+
+}
+
+.lista-personagens {
+    /* largura */
+    width: 330px;
+    /* altura */
+    height: 520px;
+    position: relative;
+}
+
+.btn-seta {
+    background-color: #ffffff;
+    width: 70px;
+    height: 70px;
+    /* arredondar bordas do elemento */
+    border-radius: 50px;
+    border: 0;
+    /* mudar cursor */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.btn-seta.btn-voltar {
+    /* transforma e rotacionar seta */
+    transform: rotatey(180deg);
+
+}
+
+/* quando passar o mouser encima muda de cor, ou aconteça algo usa o :hover */
+.btn-seta:hover {
+    background-color: #8351fe;
+}
+
+.cartao {
+    opacity: 0;
+
+    height: 100%;
+    /* quando colocado em um elemento e como se tira-se do fluxo da pagina, foi usado para colocar um elemento sobre o outro */
+    position: absolute;
+    padding: 12px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.cartao.selecionado {
+    opacity: 1;
+    /* força o cartao sr o primeiro */
+    z-index: 1;
+}
+
+.cartao .imagem-personagem {
+    width: 100%;
+    max-height: 280px;
+}
+
+.cartao .nome {
+    background-color: rgba(179, 177, 185, 0.7);
+    padding: 8px 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #ffffff;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+}
+
+.cartao .descricao {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.cartao .descricao .titulo {
+    font-size: 20px;
+    color: #ffffff;
+    padding: 12px;
+    background-color: #333333;
+}
+
+.cartao .descricao .texto {
+    font-size: 14px;
+    padding: 12px;
+    /* fazer o alinhamento do texto no espaço */
+    text-align: justify;
+    max-height: 110px;
+    /* quando nao queremos que um texto transborde */
+    overflow-y: auto;
+}
+
+.cartao.fundo-1 {
+    background-image: url(../imagens/somente-sorria.jpeg);
+    background-repeat: no-repeat;
+}
+
+.cartao.fundo-2 {
+    background-image: url(../imagens/Captura\ de\ ecrã\ 2024-06-11\ 231200.png);
+    background-repeat: no-repeat;
+}
+
+.cartao.fundo-3 {
+    background-image: url(../imagens/moto.jpeg);
+    background-repeat: no-repeat;
+}
+
+.cartao.fundo-4 {
+    background-image: url(../imagens/Captura\ de\ ecrã\ 2024-06-11\ 231232.png);
+    background-repeat: no-repeat;
+}
+
+.cartao.fundo-5 {
+    background-image: url(../imagens/Captura\ de\ ecrã\ 2024-06-11\ 231200.png);
+    background-repeat: no-repeat;
+}
+
+
+
+.redes {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    transition: opacity 0.5ms;
+   cursor: all-scroll;
+}
+.discord {
+border-radius: 20px;
+margin: 20px;
+}
+.linkedin {
+    border-radius: 20px;
+margin: 20px;
+}
+.instagram {
+    border-radius: 20px;
+margin: 20px;
+}
+.redes :hover{
+    background-color: #8351fe;
+    border-radius: 20px;
+}
